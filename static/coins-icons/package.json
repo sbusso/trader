@@ -1,0 +1,17 @@
+{
+  "name": "coinmarketcap-icons-cryptos",
+  "version": "1.0.2",
+  "description": "Get all images icons cryptos coinmarketcap",
+  "main": "start.js",
+  "repository": "https://github.com/alexandrebouttier/coinmarketcap-icons-cryptos.git",
+  "author": "Alexandre",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cmlog": "^1.0.4",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "image-downloader": "^4.0.1",
+    "lodash": "^4.17.20"
+  }
+}

@@ -21,6 +21,7 @@
 		"@typechain/ethers-v5": "^7.0.1",
 		"@typechain/hardhat": "^2.3.0",
 		"@types/chai": "^4.2.21",
+		"@types/coingecko-api": "^1.0.10",
 		"@types/mocha": "^9.0.0",
 		"@types/node": "^12.0.0",
 		"@typescript-eslint/eslint-plugin": "^4.29.1",
@@ -55,5 +56,14 @@
 		"typechain": "^5.1.2",
 		"typescript": "^4.5.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"binance-api-node": "^0.11.31",
+		"chart.js": "^3.7.0",
+		"coingecko-api": "^1.0.10",
+		"crypto-icons-plus": "^1.0.1",
+		"crypto-icons-plus-32": "^1.0.1",
+		"svelte-tradingview-widget": "^2.3.0",
+		"svelte-websocket-store": "^1.1.19"
+	}
 }
