@@ -3,6 +3,7 @@
 
 	import TradingViewWidget from 'svelte-tradingview-widget';
 	import { page } from '$app/stores';
+	import Trader from '$lib/Trader.svelte';
 	const { coin } = $page.params;
 
 	let options = {
@@ -15,4 +16,12 @@
 	};
 </script>
 
-<TradingViewWidget {options} />
+<div class="container">
+	<div class="grid grid-cols-3">
+		<div class="container">
+			<h2>Trading View</h2>
+			<!-- <TradingViewWidget {options} /> -->
+		</div>
+		<Trader {coin} />
+	</div>
+</div>

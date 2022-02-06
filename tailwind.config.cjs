@@ -3,7 +3,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				fira: ['Fira Code', 'monospace']
+				fira: ['Fira Code', 'monospace'],
+				roboto: ['Roboto', 'sans-serif'],
+				ibm: ['IBM Plex Sans', 'sans-serif']
 			}
 		}
 	},

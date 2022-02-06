@@ -41,6 +41,7 @@
 		"ethers": "^5.0.0",
 		"hardhat": "^2.8.3",
 		"hardhat-gas-reporter": "^1.0.4",
+		"node-sass": "^7.0.1",
 		"postcss": "^8.4.6",
 		"prettier": "^2.3.2",
 		"prettier-plugin-solidity": "^1.0.0-beta.13",
@@ -63,6 +64,7 @@
 		"coingecko-api": "^1.0.10",
 		"crypto-icons-plus": "^1.0.1",
 		"crypto-icons-plus-32": "^1.0.1",
+		"d3": "^7.3.0",
 		"svelte-tradingview-widget": "^2.3.0",
 		"svelte-websocket-store": "^1.1.19"
 	}
