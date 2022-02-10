@@ -36,14 +36,14 @@
 <svelte:head>
 	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </svelte:head>
-<div class="grid m-8 grid-cols-5 gap-4">
+<div class="grid grid-cols-5 gap-4 m-8">
 	<Ticker coin="btc" />
 	<Ticker coin="eth" />
 	<Ticker coin="ada" />
 	<Ticker coin="sol" />
 	<Ticker coin="aca" />
 </div>
-<table class="min-w-full divide-y divide-gray-500 m-8">
+<table class="min-w-full m-8 divide-y divide-gray-500">
 	<thead class="text-sky-400">
 		<th>Coin</th>
 		<th />
@@ -67,7 +67,7 @@
 					<td class="w-12 px-2 py-3 whitespace-nowrap"
 						><img src={coin.image} class="w-6 h-6 saturate-50" alt="" /></td
 					>
-					<td class=" px-2 py-3 whitespace-nowrap"
+					<td class="px-2 py-3 whitespace-nowrap"
 						><a href="/coins/{coin.symbol}">{coin.symbol.toUpperCase()}</a> –
 
 						<a
@@ -76,15 +76,15 @@
 							target="_blank">info</a
 						>
 						<br />
-						<span class="text-slate-300 text-sm">{coin.name}</span>
+						<span class="text-sm text-slate-300">{coin.name}</span>
 					</td>
 
-					<td class="w-20 px-2 py-3 whitespace-nowrap text-right font-fira">{coin.current_price}</td
+					<td class="w-20 px-2 py-3 text-right whitespace-nowrap font-fira">{coin.current_price}</td
 					>
-					<td class="w-20 px-2 py-3 whitespace-nowrap text-right font-fira">{coin.low_24h}</td>
-					<td class="w-20 px-2 py-3 whitespace-nowrap text-right font-fira">{coin.high_24h}</td>
+					<td class="w-20 px-2 py-3 text-right whitespace-nowrap font-fira">{coin.low_24h}</td>
+					<td class="w-20 px-2 py-3 text-right whitespace-nowrap font-fira">{coin.high_24h}</td>
 
-					<td class="w-20 px-2 py-3 whitespace-nowrap text-right">
+					<td class="w-20 px-2 py-3 text-right whitespace-nowrap">
 						<Range
 							current={coin.current_price}
 							low={coin.low_24h}
@@ -92,22 +92,22 @@
 							poc={(coin.high_24h + coin.low_24h) / 2}
 						/>
 					</td>
-					<td class="w-12 px-2 py-3 whitespace-nowrap text-right font-fira"
+					<td class="w-12 px-2 py-3 text-right whitespace-nowrap font-fira"
 						><Prct value={Number(coin.price_change_percentage_1h_in_currency)} /></td
 					>
-					<td class="w-12 px-2 py-3 whitespace-nowrap text-right font-fira"
+					<td class="w-12 px-2 py-3 text-right whitespace-nowrap font-fira"
 						><Prct value={Number(coin.price_change_percentage_24h_in_currency)} /></td
 					>
-					<td class="w-12 px-2 py-3 whitespace-nowrap text-right font-fira"
+					<td class="w-12 px-2 py-3 text-right whitespace-nowrap font-fira"
 						><Prct value={Number(coin.price_change_percentage_7d_in_currency)} /></td
 					>
-					<td class="w-12 px-2 py-3 whitespace-nowrap text-right font-fira"
+					<td class="w-12 px-2 py-3 text-right whitespace-nowrap font-fira"
 						><Prct value={Number(coin.price_change_percentage_30d_in_currency)} /></td
 					>
-					<td class="px-2 py-3 whitespace-nowrap text-right font-fira"
+					<td class="px-2 py-3 text-right whitespace-nowrap font-fira"
 						>{nFormatter(coin.market_cap)}</td
 					>
-					<td class="w-36 px-2 py-3 whitespace-nowrap ">
+					<td class="px-2 py-3 w-36 whitespace-nowrap ">
 						<Sparkline data={coin.sparkline_in_7d.price} /></td
 					>
 					<td class="px-1 py-3 whitespace-nowrap ">

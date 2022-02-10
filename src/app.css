@@ -1,15 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@100;300;700&family=IBM+Plex+Sans:wght@100;300;600&display=swap');
-
 
 @tailwind base;
 @tailwind components;
 
 body {
-    @apply bg-zinc-800;
-    color: fff;
+	@apply bg-vulcan;
+	color: fff;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	@apply text-right;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 @tailwind utilities;
-
-

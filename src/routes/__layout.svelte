@@ -2,6 +2,10 @@
 	import '../app.css';
 </script>
 
-<main class="text-white p-2">
+<svelte:head>
+	<title>Crypto Traderlabs</title>
+</svelte:head>
+
+<main class="p-2 text-white">
 	<slot />
 </main>

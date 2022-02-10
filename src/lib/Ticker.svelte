@@ -85,20 +85,20 @@
 	// );
 </script>
 
-<div class="block p-6 max-w-xs bg-slate-800 rounded-md">
-	<h5 class="mb-2 text-2xl font-bold tracking-tight text-white flex">
-		<img src="/static/coins-icons/icons/{coin}.png" class="rounded-full w-8 mr-4" alt="" />
+<div class="block max-w-xs p-6 bg-slate-800 rounded-md">
+	<h5 class="flex mb-2 text-2xl font-bold tracking-tight text-white">
+		<img src="/static/coins-icons/icons/{coin}.png" class="w-8 mr-4 rounded-full" alt="" />
 		{coin.toUpperCase()}
 	</h5>
 
 	<p
 		style="transition:color 1s ease-out"
-		class="font-bold text-3xl  font-fira"
+		class="text-3xl font-bold  font-fira"
 		in:fadeColor={{ direction: tickerDisplay.direction }}
 	>
 		{tickerDisplay.price}
 	</p>
-	<p class=" text-slate-200 text-xl font-fira ">
+	<p class="text-xl  text-slate-200 font-fira">
 		<Percentage value={tickerDisplay.changePercent} /> ({tickerDisplay.change})
 	</p>
 </div>

@@ -1,27 +1,31 @@
 <script>
 	// @ts-nocheck
 
-	import TradingViewWidget from 'svelte-tradingview-widget';
 	import { page } from '$app/stores';
+	import OrderBook from '$lib/OrderBook.svelte';
 	import Trader from '$lib/Trader.svelte';
+	import Chart from '$lib/Chart.svelte';
+	import { traderStore } from '$lib/stores/trader';
+	import { onMount } from 'svelte';
 	const { coin } = $page.params;
 
-	let options = {
-		symbol: `BINANCE:${coin}USDT`,
-		allow_symbol_change: false,
-		theme: 'dark',
-		style: 1,
-		interval: 15,
-		hide_top_toolbar: true
-	};
+	onMount(() => {
+		traderStore.set({
+			coin: coin.toUpperCase(),
+			base: 'USDT',
+			exchange: 'BINANCE',
+			precision: 2,
+			interval: '15',
+			depth: 20,
+			increment: 0.01
+		});
+	});
 </script>
 
 <div class="container">
-	<div class="grid grid-cols-3">
-		<div class="container">
-			<h2>Trading View</h2>
-			<!-- <TradingViewWidget {options} /> -->
-		</div>
-		<Trader {coin} />
+	<div class="flex flex-row">
+		<!-- <Chart class="basis-1/2" /> -->
+		<OrderBook class="basis-1/4" />
+		<Trader class="basis-1/4" />
 	</div>
 </div>
